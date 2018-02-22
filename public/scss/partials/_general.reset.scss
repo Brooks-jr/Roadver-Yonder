@@ -9,16 +9,4 @@
     box-sizing: inherit;
 }
 
-// html is set to 62.5% so that all the REM measurements are based on the root 10px sizing. So basically 1.5rem = 15px //
-html {font-size: 62.5%;}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    cursor: default;
-}
 
