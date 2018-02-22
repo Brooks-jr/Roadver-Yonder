@@ -1,0 +1,12 @@
+// ===========================================
+// -             M I X I N S
+// ===========================================
+@mixin animation-transition {
+    display: block;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+}
+
+@mixin rounded {
+    border-radius: 10rem;
+}

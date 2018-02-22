@@ -1,48 +1,44 @@
 // ===========================================
 // -             B U T T O N S
 // ===========================================
-@import "./partials/variables";
-.round {
-    border-radius: 100px;
-}
 
 .button {
-    font-weight: 700;
-    letter-spacing: 4px;
+    font-weight: 400;
+    letter-spacing: .4rem;
     position: relative;
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 15px 40px;
+        padding: 1.5rem 4rem;
         display: inline-block;
         -webkit-transition: all .2s;
         transition: all .2s;
-        @extend .round;
+        @include rounded;
     }
     &:hover {
-        -webkit-transform: translateY(-4px);
-                transform: translateY(-4px);
-        -webkit-box-shadow: 0 10px 20px $shadow;
-                box-shadow: 0 10px 20px $shadow;
-        &:after {
+        -webkit-transform: translateY(-.4rem);
+                transform: translateY(-.4rem);
+        -webkit-box-shadow: 0 1rem 2rem $shadow;
+                box-shadow: 0 1rem 2rem $shadow;
+        &::after {
             -webkit-transform: scalex(1.4) scaleY(1.6);
                     transform: scalex(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
     &:active {
-        -webkit-transform: translateY(-1px);
-                transform: translateY(-1px);
-        -webkit-box-shadow: 0 10px 8px $shadow;
-                box-shadow: 0 10px 8px $shadow;
+        -webkit-transform: translateY(-.1rem);
+                transform: translateY(-.1rem);
+        -webkit-box-shadow: 0 1rem .8rem $shadow;
+                box-shadow: 0 1rem .8rem $shadow;
     }
-    &:after {
+    &::after {
         content: '';
         display: inline-block;
         height: 100%;
         width: 100%;
-        @extend .round;
+        @include rounded;
         position: absolute;
         top: 0;
         left: 0;
@@ -50,24 +46,23 @@
         -webkit-transition: all .4s;
         transition: all .4s;
     }
-}
-
-
-.button-white {
-    border: 6px solid $white;
-    color: $white;
-    &:hover {
-        background-color: $white;
-        color: $orange;
-        &:after {
+    &--white {
+        border: .6rem solid $white;
+        color: $white;
+        &:hover {
             background-color: $white;
+            color: $orange;
+            &::after {
+                background-color: $white;
+            }
         }
+    }
+    &--animated {
+        -webkit-animation: fadeInBottom .5s ease-out .75s;
+                animation: fadeInBottom .5s ease-out .75s;
+        -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
     }
 }
 
-.button-animated {
-    -webkit-animation: fadeInBottom .5s ease-out .75s;
-            animation: fadeInBottom .5s ease-out .75s;
-    -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;
-}
+

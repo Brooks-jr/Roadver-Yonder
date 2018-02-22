@@ -1,0 +1,50 @@
+// ===========================================
+// -        H E A D E R - S E C T I O N
+// ===========================================
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($orange, .6), rgba($red-orange, .6)),url(../dist/images/bg-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 26%;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+    &__logo-wrap {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        background-color: $white;
+        &__logo {
+            height: 3.5rem;
+        }
+    }
+    &__text-wrap {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.header-title {
+    color:$white;
+    text-transform: uppercase;
+    font-weight: 700;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--main {
+        font-family: $pacifico;
+        font-size: 8rem;
+        letter-spacing: 4rem;
+        font-weight: 400;
+        animation-name: fadeInLeft;
+        @include animation-transition;
+    }
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: 1.2rem;
+        animation-name: fadeInRight;
+        @include animation-transition;
+    }
+}
