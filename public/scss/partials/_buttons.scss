@@ -1,0 +1,73 @@
+// ===========================================
+// -             B U T T O N S
+// ===========================================
+@import "./partials/variables";
+.round {
+    border-radius: 100px;
+}
+
+.button {
+    font-weight: 700;
+    letter-spacing: 4px;
+    position: relative;
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        @extend .round;
+    }
+    &:hover {
+        -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+        -webkit-box-shadow: 0 10px 20px $shadow;
+                box-shadow: 0 10px 20px $shadow;
+        &:after {
+            -webkit-transform: scalex(1.4) scaleY(1.6);
+                    transform: scalex(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &:active {
+        -webkit-transform: translateY(-1px);
+                transform: translateY(-1px);
+        -webkit-box-shadow: 0 10px 8px $shadow;
+                box-shadow: 0 10px 8px $shadow;
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        @extend .round;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+    }
+}
+
+
+.button-white {
+    border: 6px solid $white;
+    color: $white;
+    &:hover {
+        background-color: $white;
+        color: $orange;
+        &:after {
+            background-color: $white;
+        }
+    }
+}
+
+.button-animated {
+    -webkit-animation: fadeInBottom .5s ease-out .75s;
+            animation: fadeInBottom .5s ease-out .75s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+}
