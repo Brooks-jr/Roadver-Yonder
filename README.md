@@ -9,6 +9,7 @@
 </p>
 
 - **Custom Animations** - avoiding using animation libraries.
+- **Custom Logo/Icons** - creating custom logo for branding and icons for site with Adobe Illustrator.
 - **SASS | SCSS** - utilizing preprocessors for modern workflow & design.
 - **Node | Gulp** - utilizing to manage my project's packages and automate my workflow.
 
