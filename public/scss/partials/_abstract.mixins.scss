@@ -10,3 +10,16 @@
 @mixin rounded {
     border-radius: 10rem;
 }
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin title-cursive {
+    font-size: 3.8rem;
+    font-family: $pacifico;
+}

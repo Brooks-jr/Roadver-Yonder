@@ -1,0 +1,36 @@
+// ===========================================
+// -           H O M E - P A G E
+// ===========================================
+section.about {
+    background-color: $white;
+    padding: 25rem 0;
+    margin-top: -20vh;
+
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    display: inline-block;
+    background-image: $grapefruit-gradient;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    span {
+        @include title-cursive;
+    }
+}
+
+.sub-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
