@@ -65,4 +65,34 @@
     }
 }
 
+.button-text {
+    &:link,
+    &:visited {
+        color: $orange;
+        display: inline-block;
+        text-decoration: none;
+        border: .2rem solid $orange;
+        padding: .6rem 1rem;
+        font-weight: 700;
+        font-size: $default-font-size;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        letter-spacing: .2rem;
+        @include rounded;
+    }
+    &:hover {
+        background-color: $orange;
+        color: $white;
+        -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);
+        -webkit-transform: translateY(-.2rem);
+                transform: translateY(-.2rem);
+    }
+    &:active {
+        -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
 
