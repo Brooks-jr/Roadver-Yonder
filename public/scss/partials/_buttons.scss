@@ -51,7 +51,7 @@
         color: $white;
         &:hover {
             background-color: $white;
-            color: $orange;
+            color: $pink-orange;
             &::after {
                 background-color: $white;
             }
@@ -68,10 +68,10 @@
 .button-text {
     &:link,
     &:visited {
-        color: $orange;
+        color: $pink-orange;
         display: inline-block;
         text-decoration: none;
-        border: .2rem solid $orange;
+        border: .4rem solid $pink-orange;
         padding: .6rem 1rem;
         font-weight: 700;
         font-size: $default-font-size;
@@ -81,7 +81,7 @@
         @include rounded;
     }
     &:hover {
-        background-color: $orange;
+        background-color: $pink-orange;
         color: $white;
         -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);
                 box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);

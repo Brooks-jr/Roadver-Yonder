@@ -34,3 +34,16 @@ section.about {
         margin-bottom: 3rem;
     }
 }
+
+section.features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($orange, .5), 
+        rgba($red-orange, .5)),
+        url(../dist/images/bg-features.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 1%;
+    background-attachment: fixed;
+}

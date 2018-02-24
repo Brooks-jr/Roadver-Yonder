@@ -3,7 +3,11 @@
 // ===========================================
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($orange, .6), rgba($red-orange, .6)),url(../dist/images/bg-header.jpg);
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($orange, .6), 
+        rgba($red-orange, .6)),
+        url(../dist/images/bg-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 26%;
