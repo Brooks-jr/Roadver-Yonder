@@ -23,7 +23,7 @@ section.about {
 }
 
 .sub-heading {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -40,10 +40,16 @@ section.features {
     background-image: linear-gradient(
         to right bottom, 
         rgba($orange, .5), 
-        rgba($red-orange, .5)),
+        rgba($red-orange, .35)),
         url(../dist/images/bg-features.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 1%;
     background-attachment: fixed;
+    clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
+    margin-top: -3rem;
+    // transform: skewY(-7deg);
+    // & > * {
+    //     transform: skewY(7deg);
+    // }
 }

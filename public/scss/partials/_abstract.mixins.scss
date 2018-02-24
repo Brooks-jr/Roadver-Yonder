@@ -23,3 +23,7 @@
     font-size: 3.8rem;
     font-family: $pacifico;
 }
+
+@mixin animation-jerk-fix {
+    backface-visibility: hidden;
+}

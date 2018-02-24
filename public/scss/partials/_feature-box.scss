@@ -1,15 +1,28 @@
 .feature-box {
-    background-color: rgba($white, .6);
+    background-color: rgba($white, .8);
     font-size: 1.5rem;
     padding: 2.5rem;
     text-align: center;
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba($black, .15);
-
+    transition: transform .3s;
+    @include animation-jerk-fix;
+    .sub-heading {
+        font-family: $king;
+        font-size: 2rem;
+    }
     &__icon {
-
+        display: inline-block;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+        background-image: $grapefruit-gradient;
+        -webkit-background-clip: text;
+                background-clip: text;
+        color: transparent;
     }
     &__text {
-        
+    }
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
     }
 }

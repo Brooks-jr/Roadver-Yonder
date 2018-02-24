@@ -36,7 +36,7 @@
     color:$white;
     text-transform: uppercase;
     font-weight: 700;
-    backface-visibility: hidden;
+    @include animation-jerk-fix;
     margin-bottom: 6rem;
     &--main {
         font-family: $pacifico;
