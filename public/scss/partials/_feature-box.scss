@@ -1,15 +1,18 @@
 .feature-box {
-    background-color: rgba($white, .8);
+    background-color: rgba($white, .85);
     font-size: 1.5rem;
     padding: 2.5rem;
     text-align: center;
     border-radius: .3rem;
-    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    -webkit-box-shadow: 0 1.5rem 4rem $shadow;
+            box-shadow: 0 1.5rem 4rem $shadow;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
     @include animation-jerk-fix;
     .sub-heading {
-        font-family: $king;
-        font-size: 2rem;
+        letter-spacing: .02rem;
     }
     &__icon {
         display: inline-block;
@@ -23,6 +26,9 @@
     &__text {
     }
     &:hover {
-        transform: translateY(-1.5rem) scale(1.03);
+        -webkit-box-shadow: 0 1.5 8rem $shadow;
+                box-shadow: 0 1.5 8rem $shadow;
+        -webkit-transform: translateY(-1.5rem) scale(1.03);
+                transform: translateY(-1.5rem) scale(1.03);
     }
 }

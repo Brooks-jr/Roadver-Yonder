@@ -3,6 +3,12 @@
 // ===========================================
 .header {
     height: 95vh;
+    background-image: -webkit-gradient(
+        linear, 
+        left top, right bottom, 
+        from(rgba($orange, .6)), 
+        to(rgba($red-orange, .6))),
+        url(../dist/images/bg-header.jpg);
     background-image: linear-gradient(
         to right bottom, 
         rgba($orange, .6), 
@@ -12,7 +18,8 @@
     background-repeat: no-repeat;
     background-position: 50% 26%;
     background-attachment: fixed;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     &__logo-wrap {
         position: absolute;
@@ -27,7 +34,8 @@
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         text-align: center;
     }
 }
@@ -43,13 +51,15 @@
         font-size: 8rem;
         letter-spacing: 4rem;
         font-weight: 400;
-        animation-name: fadeInLeft;
+        -webkit-animation-name: fadeInLeft;
+                animation-name: fadeInLeft;
         @include animation-transition;
     }
     &--sub {
         font-size: 2rem;
         letter-spacing: 1.2rem;
-        animation-name: fadeInRight;
+        -webkit-animation-name: fadeInRight;
+                animation-name: fadeInRight;
         @include animation-transition;
     }
 }

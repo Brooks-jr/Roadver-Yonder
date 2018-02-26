@@ -1,6 +1,10 @@
 // ===========================================
 // -           H O M E - P A G E
 // ===========================================
+
+// ======================
+// <-- ABOUT -->
+// ======================
 section.about {
     background-color: $white;
     padding: 25rem 0;
@@ -8,7 +12,7 @@ section.about {
 
 }
 
-.about-title {
+.section-title {
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: .3rem;
@@ -34,22 +38,38 @@ section.about {
         margin-bottom: 3rem;
     }
 }
-
+// ======================
+// <-- FEATURES -->
+// ======================
 section.features {
     padding: 20rem 0;
+    background-image: -webkit-gradient(
+        linear, 
+        left top, right bottom, 
+        from(rgba($orange, .5)), 
+        to(rgba($red-orange, .5))),
+        url(../dist/images/bg-features.jpg);
     background-image: linear-gradient(
         to right bottom, 
         rgba($orange, .5), 
-        rgba($red-orange, .35)),
+        rgba($red-orange, .5)),
         url(../dist/images/bg-features.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 1%;
     background-attachment: fixed;
-    clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
+            clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
     margin-top: -3rem;
     // transform: skewY(-7deg);
     // & > * {
     //     transform: skewY(7deg);
     // }
+}
+
+// ======================
+// <-- ADVENTURES-->
+// ======================
+section.adventures {
+    padding: 10rem 0 50rem 0;
 }
