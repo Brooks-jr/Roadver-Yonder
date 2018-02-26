@@ -57,6 +57,17 @@
             }
         }
     }
+    &--orange {
+        border: .6rem solid $pink-orange;
+        color: $pink-orange;
+        &:hover {
+            background-color: $pink-orange;
+            color: $white;
+            &::after {
+                background-color: $pink-orange;
+            }
+        }
+    }
     &--animated {
         -webkit-animation: fadeInBottom .5s ease-out .75s;
                 animation: fadeInBottom .5s ease-out .75s;
@@ -72,7 +83,7 @@
         display: inline-block;
         text-decoration: none;
         border: .4rem solid $pink-orange;
-        padding: .6rem 1rem;
+        padding: 1.5rem 4rem;
         font-weight: 700;
         font-size: $default-font-size;
         -webkit-transition: all .2s;

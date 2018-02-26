@@ -14,17 +14,19 @@ $black: #000;
 $orange: #ffa42d;
 $pink-orange: #fa8072;
 $red-orange: #ff004c;
-$snow: #ecf7ff;
-$ice: #00b7ff;
+$snow: #9ed6ff;
+$ice: #803cff;
+$winter: #a090ff;
 $grass: #7ed56f;
-$leaf: #28b485;
+$sun: #ddb500;
+$forest: #aec73e;
 $foam: #00e4c5;
 $water: #005f96;
 $sea: #14a9b5;
 // gradients
 $grapefruit-gradient: linear-gradient(to right, $orange, $red-orange);
 $winter-gradient: linear-gradient(to right bottom, $snow, $ice);
-$forest-gradient: linear-gradient(to right bottom, $grass, $leaf);
+$forest-gradient: linear-gradient(to right bottom, $sun, $grass);
 $sea-gradient: linear-gradient(to right bottom, $foam, $water);
 
 

@@ -1,0 +1,74 @@
+// ===========================================
+// -          T E S T I M O N I A L 
+// ===========================================
+
+.testimonial {
+    width: 75%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 3rem 6rem $shadow;
+            box-shadow: 0 3rem 6rem $shadow;
+    border-radius: 3px;
+    padding: 6rem;
+    background-color: rgba($white, .6);
+    font-size: $default-font-size;
+    -webkit-transform: skewX(-12deg);
+            transform: skewX(-12deg);
+    @include animation-jerk-fix;
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        position: relative;
+        -webkit-clip-path: circle(50% at 50% 50%);
+                clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+                shape-outside: circle(50% at 50% 50%);
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+                transform: translateX(-3rem) skewX(12deg);
+    }
+    &__text {
+        -webkit-transform: skewX(12deg);
+                transform: skewX(12deg);
+       
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scale(1.4);
+                transform: scale(1.4);
+        -webkit-transition: all .5s;
+                transition: all .5s;
+    }
+    &__username {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -20%);
+                transform: translate(-50%, -20%);
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        letter-spacing: .1rem;
+        opacity: 0;
+        -webkit-transition: all .5s;
+                transition: all .5s;
+    }
+    &:hover &__username {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        
+    }
+    &:hover &__image {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-filter: blur(3px) brightness(60%);
+                filter: blur(3px) brightness(60%);
+    }
+}
+
+.fa-quote-left,
+.fa-quote-right {
+    color: $pink-orange;
+}
