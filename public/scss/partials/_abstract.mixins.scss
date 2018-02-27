@@ -3,13 +3,21 @@
 // ===========================================
 @mixin animation-transition {
     display: block;
-    animation-duration: .8s;
-    animation-timing-function: ease-out;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
 }
 
 @mixin rounded {
     border-radius: 100px;
 }
+
+@mixin rounded-slight {
+    border-radius: 3px;
+}
+
+
 
 @mixin clearfix {
     &::after {
@@ -25,5 +33,6 @@
 }
 
 @mixin animation-jerk-fix {
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }

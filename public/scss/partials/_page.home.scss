@@ -72,12 +72,44 @@ section.features {
 // ======================
 section.adventures {
     padding: 10rem 0 15rem 0;
+    background-color: $white;
 }
 
 // ======================
 // <-- TESTIMONIALS-->
 // ======================
 section.testimonials {
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($white, .8), 
+        rgba($white, .8)),
+        url(../dist/images/bg-testimonial.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 1%;
+    background-attachment: fixed;
     padding: 15rem 0;
     position: relative;
+}
+
+// ======================
+// <-- BOOKING -->
+// ======================
+section.booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $orange, $red-orange);
+}
+
+.book {
+    background-image: linear-gradient(105deg, rgba($white, .9)0%, rgba($white, .85)50%, transparent 50%),url(../dist/images/bg-booking-form.png);
+    background-position: 70% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include rounded-slight;
+    box-shadow: 0 1.5rem 8rem $shadow-darkest;
+    height: 50rem;
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
 }

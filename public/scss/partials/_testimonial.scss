@@ -2,12 +2,12 @@
 // -          T E S T I M O N I A L 
 // ===========================================
 
-.testimonial {
+.testimonial {  
     width: 75%;
     margin: 0 auto;
     -webkit-box-shadow: 0 3rem 6rem $shadow;
             box-shadow: 0 3rem 6rem $shadow;
-    border-radius: 3px;
+    @include rounded-slight;
     padding: 6rem;
     background-color: rgba($white, .6);
     font-size: $default-font-size;
@@ -33,7 +33,7 @@
     }
     &__image {
         width: 100%;
-        height: 100%;
+        overflow: hidden;
         -webkit-transform: scale(1.4);
                 transform: scale(1.4);
         -webkit-transition: all .5s;
