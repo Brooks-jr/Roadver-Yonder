@@ -16,6 +16,7 @@ section.about {
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: .3rem;
+    padding-bottom: .3rem;
     display: inline-block;
     background-image: $grapefruit-gradient;
     -webkit-background-clip: text;
@@ -110,6 +111,6 @@ section.booking {
     height: 50rem;
     &__form {
         width: 50%;
-        padding: 6rem;
+        padding: 3rem 6rem 6rem 6rem;
     }
 }

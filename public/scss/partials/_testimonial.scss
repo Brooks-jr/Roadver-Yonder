@@ -56,8 +56,7 @@
     }
     &:hover &__username {
         opacity: 1;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        @include center-hv;
         
     }
     &:hover &__image {

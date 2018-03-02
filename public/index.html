@@ -30,6 +30,25 @@
 
 <body>
 <!-- =======================================
+-		    N A V I G A T I O N
+======================================== -->
+<div class="navigation">
+	<input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
+	<label for="navigation-toggle" class="navigation__button">
+		<span class="navigation__icon">&NonBreakingSpace;</span>
+	</label>
+	<div class="navigation__background">&NonBreakingSpace;</div>
+	<nav class="navigation__nav">
+		<ul class="navigation__list">
+			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>01</sup></span> About Us</a></li>
+			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>02</sup></span> Benefiting You</a></li>
+			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>03</sup></span> Popular Adventures</a></li>
+			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>04</sup></span> Your Stories</a></li>
+			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>05</sup></span> Start Now</a></li>
+		</ul>
+	</nav>
+</div>
+<!-- =======================================
 -				H E A D E R
 ======================================== -->
 	<header class="header">
@@ -315,7 +334,7 @@
 					</figure>
 					<div class="testimonial__text">
 						<h3 class="sub-heading u-margin-bottom-small">
-							<i class="fas fa-quote-left"></i> Our lives are changed, we're making this anual
+							<i class="fas fa-quote-left"></i> Changed our lives. we're making this annual
 							<i class="fas fa-quote-right"></i>
 						</h3>
 						<p>This was the first road trip for my friends and I, we always wanted to do one but had no idea how to prepare. Roadver
@@ -337,34 +356,88 @@
 			<div class="row">
 				<div class="book">
 					<div class="book__form">
-						<div class=" u-margin-bottom-large">
+						<div class=" u-margin-bottom-medium">
 							<h2 class="section-title">
 								Start planning your
 								<span>trip</span>
 							</h2>
 						</div>
 						<form action="#" class="form">
+							<!-- name -->
 							<div class="form__group">
-								<!-- name -->
 								<input type="text" class="form__input" placeholder="Full Name" id="name" required>
 								<label for="name" class="form__label">Full Name</label>
 							</div>
+							<!-- email -->
 							<div class="form__group">
-								<!-- email -->
 								<input type="email" class="form__input" placeholder="Email Address" id="email" required>
 								<label for="email" class="form__label">Email Address</label>
 							</div>
+							<!-- radio buttons -->
+							<div class="form__group u-margin-bottom-medium">
+								<!-- 1 -->
+								<div class="form__radio-group">
+									<input type="radio" class="form__radio-input" id="solo" name="size">
+									<label for="solo" class="form__radio-label">
+										<span class="form__radio-button"></span>
+										Lone wanderer</label>
+								</div>
+								<!-- 2 -->
+								<div class="form__radio-group">
+									<input type="radio" class="form__radio-input" id="group" name="size">
+									<label for="group" class="form__radio-label">
+										<span class="form__radio-button"></span>
+										Gang's all here</label>
+								</div>
+							</div>
+							<div class="form__group">
+								<button class="button button--orange">
+									Next Step <i class="fas fa-caret-right"></i>
+								</button>
+							</div>		
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-
 	</main>
 
 <!-- =======================================
 -			   F O O T E R
 ======================================== -->
+
+	<footer class="footer">
+		<div class="footer__logo-box">
+			<img src="#" alt="Roadver Yonder Logo" class="footer__logo">
+		</div>
+		<!-- top -->
+		<div class="row">
+			<div class="footer__navigation">
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+					<li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+					<li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+					<li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+					<li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- bottom -->
+		<div class="footer__bottom u-margin-top-huge">
+			<div class="row">
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+					<li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+					<li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-twitter fa-lg"></i></a></li>
+					<li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-instagram fa-lg"></i></a></li>
+				</ul>
+				<p class="footer__copyright u-margin-top-small">© 2011 - 2018 Roadver Yonder Private ltd. All Rights Reserved</p>
+			</div>
+			<!-- <a href="#" class="button button--orange" title="Back To Top" role="button">
+					<i class="fas fa-angle-double-up"></i>
+			</a> -->
+		</div>
+	</footer>
 </body>
 
 </html>

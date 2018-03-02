@@ -9,14 +9,16 @@
             animation-timing-function: ease-out;
 }
 
-@mixin rounded {
-    border-radius: 100px;
-}
 
 @mixin rounded-slight {
     border-radius: 3px;
 }
-
+@mixin rounded {
+    border-radius: 100px;
+}
+@mixin circle {
+    border-radius: 50%;
+}
 
 
 @mixin clearfix {
@@ -25,6 +27,10 @@
         display: table;
         clear: both;
     }
+}
+@mixin center-hv {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 @mixin title-cursive {
