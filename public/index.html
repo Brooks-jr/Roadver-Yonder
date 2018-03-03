@@ -32,22 +32,22 @@
 <!-- =======================================
 -		    N A V I G A T I O N
 ======================================== -->
-<div class="navigation">
-	<input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
-	<label for="navigation-toggle" class="navigation__button">
-		<span class="navigation__icon">&NonBreakingSpace;</span>
-	</label>
-	<div class="navigation__background">&NonBreakingSpace;</div>
-	<nav class="navigation__nav">
-		<ul class="navigation__list">
-			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>01</sup></span> About Us</a></li>
-			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>02</sup></span> Benefiting You</a></li>
-			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>03</sup></span> Popular Adventures</a></li>
-			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>04</sup></span> Your Stories</a></li>
-			<li class="navigation__item"><a href="" class="navigation__link"><span><sup>05</sup></span> Start Now</a></li>
-		</ul>
-	</nav>
-</div>
+	<div class="navigation">
+		<input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
+		<label for="navigation-toggle" class="navigation__button">
+			<span class="navigation__icon">&NonBreakingSpace;</span>
+		</label>
+		<div class="navigation__background">&NonBreakingSpace;</div>
+		<nav class="navigation__nav">
+			<ul class="navigation__list">
+				<li class="navigation__item"><a href="" class="navigation__link"><span><sup>01</sup></span> About Us</a></li>
+				<li class="navigation__item"><a href="" class="navigation__link"><span><sup>02</sup></span> Benefiting You</a></li>
+				<li class="navigation__item"><a href="" class="navigation__link"><span><sup>03</sup></span> Popular Adventures</a></li>
+				<li class="navigation__item"><a href="" class="navigation__link"><span><sup>04</sup></span> Your Stories</a></li>
+				<li class="navigation__item"><a href="" class="navigation__link"><span><sup>05</sup></span> Start Now</a></li>
+			</ul>
+		</nav>
+	</div>
 <!-- =======================================
 -				H E A D E R
 ======================================== -->
@@ -63,7 +63,7 @@
 				<span class="header-title--sub">to find life | not escape it</span>
 			</h1>
 
-			<a href="#" class="button button--white button--animated">Explore with us
+			<a href="#adventures" class="button button--white button--animated">Explore with us
 				<i class="fas fa-caret-down"></i>
 			</a>
 		</div>
@@ -151,7 +151,7 @@
 <!-- =======================================
 -			A D V E N T U R E S
 ======================================== -->
-		<section class="adventures">
+		<section class="adventures" id="adventures">
 			<div class="u-center-text u-margin-bottom-large">
 				<h2 class="section-title">
 					Most popular
@@ -195,7 +195,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">$79</p>
 								</div>
-								<a href="#" class="button button--white card__button card__button--1">Adventure Now!</a>
+								<a href="#modal" class="button button--white card__button card__button--1">Adventure Now!</a>
 							</div>
 						</div>
 					</div>
@@ -235,7 +235,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">$148</p>
 								</div>
-								<a href="#" class="button button--white card__button card__button--2">Adventure Now!</a>
+								<a href="#modal" class="button button--white card__button card__button--2">Adventure Now!</a>
 							</div>
 						</div>
 					</div>
@@ -275,7 +275,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">$186</p>
 								</div>
-								<a href="#" class="button button--white card__button card__button--3">Adventure Now!</a>
+								<a href="#modal" class="button button--white card__button card__button--3">Adventure Now!</a>
 							</div>
 						</div>
 					</div>
@@ -358,7 +358,7 @@
 					<div class="book__form">
 						<div class=" u-margin-bottom-medium">
 							<h2 class="section-title">
-								Start planning your
+								prepare your
 								<span>trip</span>
 							</h2>
 						</div>
@@ -438,6 +438,24 @@
 			</a> -->
 		</div>
 	</footer>
+<!-- =======================================
+-				M O D A L
+======================================== -->
+	<div class="modal" id="modal">
+		<div class="modal__content">
+			<div class="modal__left">
+				<img src="dist/images/modal-1.jpg" alt="trip image" class="modal__image">
+				<img src="dist/images/modal-2.jpg" alt="trip image" class="modal__image">
+			</div>
+			<div class="modal__right">
+				<a href="#adventures" class="modal__close">&times;</a>
+				<h2 class="section-title u-margin-bottom-small">Before we set <span>out...</span></h2>
+				<h3 class="sub-headine u-margin-bottom-small">Important &ndash; Be sure you are familiar with our terms before continuing</h3>
+				<p class="modal__text">Please read these terms and conditions of use carefully before accessing, using or obtaining any materials, information, products or services. By accessing, the ROADVER YONDER website, mobile or tablet application, or any other feature or other ROADVER YONDER platform (collectively “Our Website”) you agree to be bound by these terms and conditions (“Terms”) and our Privacy Policy. These terms and conditions, as may be amended from time to time, apply to all our services directly or indirectly (through distributors) made available online, through any mobile device, by email, or by telephone..</p>
+				<a href="#" class="button button--orange">lets do it!</a>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
