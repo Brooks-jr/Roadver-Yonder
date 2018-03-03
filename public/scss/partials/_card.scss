@@ -128,10 +128,7 @@
 
     // BACK OF CARD ==================>
     &__call-to-action {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include center-hv;
+        @include absolute-center;
         width: 90%;
         text-align: center;
     }

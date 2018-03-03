@@ -40,9 +40,7 @@
                 transition: all .5s;
     }
     &__username {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        @include absolute-center;
         -webkit-transform: translate(-50%, -20%);
                 transform: translate(-50%, -20%);
         color: $white;

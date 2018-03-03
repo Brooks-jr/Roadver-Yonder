@@ -74,10 +74,7 @@
             height: 1.3rem;
             width: 1.3rem;
             @include circle;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            @include center-hv;
+            @include absolute-center;
             background-color: $pink-orange;
             opacity: 0;
             transition: opacity .2s;
