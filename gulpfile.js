@@ -22,36 +22,36 @@ var images_path = 'public/images/**/*.{png,jpeg,jpg,svg,gif}';
 
 
 // STYLE TASK - CSS
-// gulp.task('styles', function() {
-//     console.log('starting STYLE task');
-//     // goes into public folder -> css folder and first fetches the reset.css file then all* files with the extension .css
-//     return gulp.src(['public/css/reset.css', css_path])
-//         .pipe(plumber(function(err) {
-//             console.log('styles task error');
-//             console.log(err);
-//             this.emit('end');
-//         }))
-//         // show sourcemaps what files looked like before
-//         .pipe(sourcemaps.init())
-//         // passes files into autoprefixer plugin
-//         .pipe(autoprefixer())
-//         // concats files into one file called styles.css
-//         .pipe(concat('styles.css'))
-//         // pass styles.css into clean css plugin to minify
-//         .pipe(cleanCss())
-//         // writes sourcemaps files based on what init saw
-//         .pipe(sourcemaps.write())
-//         // saves files in dist folder
-//         .pipe(gulp.dest(dist_path))
-//         // trigger livereload
-//         .pipe(livereload())
-// });
+gulp.task('styles-css', function() {
+    console.log('starting STYLE (CSS) task');
+    // goes into public folder -> css folder and first fetches the reset.css file then all* files with the extension .css
+    return gulp.src(['public/css/reset.css', css_path])
+        .pipe(plumber(function(err) {
+            console.log('styles task error');
+            console.log(err);
+            this.emit('end');
+        }))
+        // show sourcemaps what files looked like before
+        .pipe(sourcemaps.init())
+        // passes files into autoprefixer plugin
+        .pipe(autoprefixer())
+        // concats files into one file called styles.css
+        .pipe(concat('fonts.css'))
+        // pass styles.css into clean css plugin to minify
+        .pipe(cleanCss())
+        // writes sourcemaps files based on what init saw
+        .pipe(sourcemaps.write())
+        // saves files in dist folder
+        .pipe(gulp.dest(dist_path))
+        // trigger livereload
+        .pipe(livereload())
+});
 // // =====================================================
 
 
 // STYLE TASK - SASS/SCSS
-gulp.task('styles', function () {
-    console.log('starting STYLE task');
+gulp.task('styles-scss', function () {
+    console.log('starting STYLE (SCSS) task');
     return gulp.src('public/scss/main.scss')
         // error catcher plumber allows watch to continue to run
         .pipe(plumber(function (err) {
@@ -104,7 +104,7 @@ gulp.task('clean', function () {
 
 
 // DEFAULT TASK
-gulp.task('default', ['clean', 'images', 'styles'], function () {
+gulp.task('default', ['clean', 'images', 'styles-css', 'styles-scss'], function () {
     console.log('starting DEFAULT task');
 });
 // =====================================================
@@ -115,7 +115,7 @@ gulp.task('watch', ['default'], function () {
     console.log('starting WATCH task');
     require('./server.js');
     livereload.listen();
-    // gulp.watch(css_path, ['styles']);
-    gulp.watch('public/scss/**/*.scss', ['styles']);
+    // gulp.watch(css_path, ['styles-css']);
+    gulp.watch('public/scss/**/*.scss', ['styles-scss']);
 });
 // =====================================================
