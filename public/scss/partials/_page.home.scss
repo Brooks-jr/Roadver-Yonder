@@ -75,7 +75,7 @@ section.features {
         url(../dist/images/bg-features.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 1%;
     background-attachment: fixed;
     -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
@@ -103,6 +103,12 @@ section.adventures {
 // <-- TESTIMONIALS-->
 // ======================
 section.testimonials {
+    background-image: -webkit-gradient(
+        linear, 
+        left top, right bottom, 
+        from(rgba($white, .8)), 
+        to(rgba($white, .8))),
+        url(../dist/images/bg-testimonial.gif);
     background-image: linear-gradient(
         to right bottom, 
         rgba($white, .8), 
@@ -125,6 +131,7 @@ section.testimonials {
 // ======================
 section.booking {
     padding: 15rem 0;
+    background-image: -webkit-gradient(linear, left top, right bottom, from($orange), to($red-orange));
     background-image: linear-gradient(to right bottom, $orange, $red-orange);
 
     @include layout(tablet-p) {
@@ -139,12 +146,14 @@ section.booking {
     background-size: cover;
 
     @include rounded-slight;
-    box-shadow: 0 1.5rem 8rem $shadow-darkest;
+    -webkit-box-shadow: 0 1.5rem 8rem $shadow-darkest;
+            box-shadow: 0 1.5rem 8rem $shadow-darkest;
 
     @include layout(tablet-l) {
         background-image: linear-gradient(105deg, rgba($white, .9)0%, rgba($white, .85)65%, transparent 65%),url(../dist/images/bg-booking-form.png);
     }
     @include layout(tablet-p) {
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba($white, .9)), to(rgba($white, .85))),url(../dist/images/bg-booking-form.png);
         background-image: linear-gradient(to right, rgba($white, .9)0%, rgba($white, .85)100%),url(../dist/images/bg-booking-form.png);
     }
     &__form {

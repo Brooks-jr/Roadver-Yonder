@@ -26,7 +26,9 @@
         display: table;
         overflow: hidden;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.25);
+        -webkit-transform: translate(-50%, -50%) scale(.25);
+                transform: translate(-50%, -50%) scale(.25);
+        -webkit-transition: all .5s .2s;
         transition: all .5s .2s;
     }
     &__left {
@@ -74,11 +76,13 @@
     &:target {
         opacity: 1;
         visibility: visible;
+        -webkit-transition: all .3s;
         transition: all .3s;
     }
     &:target &__content {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
     &__close {
         &:link,
@@ -90,8 +94,15 @@
             font-size: 3rem;
             text-decoration: none;
             display: inline-block;
+            -webkit-transition: all .2s;
             transition: all .2s;
             line-height: 1;
+            @include layout(tablet-p) {
+                color: $red-orange;
+                font-size: 5rem;
+                background-color: $white;
+                @include rounded;
+            }
         }
         &:hover {
             color: $red-orange;

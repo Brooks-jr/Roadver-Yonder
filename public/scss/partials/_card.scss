@@ -170,12 +170,14 @@
         height: auto;
         @include rounded-slight;
         background-color: $white;
-        box-shadow: 0 1.5rem 4rem $shadow;
+        -webkit-box-shadow: 0 1.5rem 4rem $shadow;
+                box-shadow: 0 1.5rem 4rem $shadow;
        
         &__side {
             height: auto;
             position: relative;
-            box-shadow: none;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
 
             &--back {
                 -webkit-transform: rotateY(0);

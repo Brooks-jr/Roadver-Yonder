@@ -69,9 +69,12 @@
         &:hover,
         &active {
             color: $red-orange;
-            transform: rotate(5deg) scale(1.3);
+            -webkit-transform: rotate(5deg) scale(1.3);
+                    transform: rotate(5deg) scale(1.3);
+            -webkit-transition: all .25s;
             transition: all .25s;
-            box-shadow: 0 1.5rem 2rem $shadow-light;
+            -webkit-box-shadow: 0 1.5rem 2rem $shadow-light;
+                    box-shadow: 0 1.5rem 2rem $shadow-light;
         }
     }
     &__bottom  {

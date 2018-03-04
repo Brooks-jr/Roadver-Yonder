@@ -48,6 +48,7 @@
         top: 0;
         left: 0;
         z-index: 9998;
+        visibility: hidden;
         opacity: 0;
         width: 0;
         -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -98,6 +99,7 @@
                 transform: scale(80);
     }
     &__checkbox:checked ~ &__nav {
+        visibility: visible;
         opacity: 1;
         width: 100%;
     }

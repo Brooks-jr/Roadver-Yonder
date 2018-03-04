@@ -16,10 +16,12 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        -webkit-transition: all .3s;
         transition: all .3s;
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem $shadow-light;
+            -webkit-box-shadow: 0 1rem 2rem $shadow-light;
+                    box-shadow: 0 1rem 2rem $shadow-light;
             border-bottom: 3px solid $grass;
         }
         &:focus:invalid {
@@ -41,12 +43,14 @@
         margin-left: 2rem;
         margin-top: .7rem;
         display: block;
+        -webkit-transition: all .3s;
         transition: all .3s;
     }
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-4rem);
+        -webkit-transform: translateY(-4rem);
+                transform: translateY(-4rem);
     }
     &__radio-group {
         width: 49%;
@@ -87,6 +91,7 @@
             @include absolute-center;
             background-color: $pink-orange;
             opacity: 0;
+            -webkit-transition: opacity .2s;
             transition: opacity .2s;
         }
     }
