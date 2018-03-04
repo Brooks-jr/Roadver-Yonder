@@ -29,6 +29,10 @@
             color: lighten($grey, 30%);
         }
 
+        @include layout(tablet-p) {
+            width: 100%;
+        }
+
     }
     
     &__label {
@@ -49,14 +53,20 @@
         display: inline-block;
         font-weight: 900;
         letter-spacing: .1rem;
+
+        @include layout(tablet-p) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
     &__radio-input {
         display: none;
     }
     &__radio-label {
+        color: $pink-orange;
         position: relative;
         padding-left: 4.5rem;
-        font-size: $default-font-size;
+        font-size: 2rem;
         cursor: pointer;
     }
     &__radio-button {

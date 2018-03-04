@@ -13,17 +13,37 @@
         -webkit-transition: all .2s;
         transition: all .2s;
         outline-offset: 1.5rem;
+        @include layout(tablet-p) {
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            box-shadow: 0 1.5rem 3rem $shadow;
+        }
         &--image1 {
             left: 0;
             top: -2rem;
+            @include layout(tablet-p) {
+                top: 0;
+                transform: scale(1);
+            }            
         }
         &--image2 {
             right: -5%;
             top: 2rem;
+            @include layout(tablet-p) {
+                top: 0;
+                transform: scale(1.3);
+                z-index: 100;
+            }  
         }
         &--image3 {
             left: 23%;
             top: 10rem;
+            @include layout(tablet-p) {
+                top: -1rem;
+                left: 5%;
+                transform: scale(1.1);
+            }  
         }
         &:hover {
             outline: 1.5rem solid $pink-orange;

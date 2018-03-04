@@ -21,7 +21,6 @@
             background-color: $white;
         }
         &--back {
-            background-color: black;
             -webkit-transform: rotateY(180deg);
                     transform: rotateY(180deg);
             &-1 {
@@ -162,6 +161,51 @@
             &:hover {
                 color: $winter;
             }
+        }
+    }
+
+
+    // MEDIA QUERY
+    @include layout(tablet-p) {
+        height: auto;
+        @include rounded-slight;
+        background-color: $white;
+        box-shadow: 0 1.5rem 4rem $shadow;
+       
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                -webkit-transform: rotateY(0);
+                        transform: rotateY(0);
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+        &:hover &__side--front {
+            -webkit-transform: rotateY(0);
+                    transform: rotateY(0);
+        }
+        &__details {
+            padding: 1rem 3rem;
+        }
+        // BACK OF CARD ==================>
+        &__call-to-action {
+            position: relative;
+            top: 0%;
+            left: 0;
+            -webkit-transform: translate(0);
+                    transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+        &__price-box {
+            margin-bottom: 4rem;
+        }
+        &__price-value {
+            font-size: 12rem;
         }
     }
 }

@@ -2,8 +2,24 @@
 // -                B A S E
 // ===========================================
 
-// html is set to 62.5% so that all the REM measurements are based on the root 10px sizing. So basically 1.5rem = 15px //
-html {font-size: 62.5%;}
+html {
+// html is set to 62.5% so that all the REM measurements are based on the root 10px sizing/
+    font-size: 62.5%; // 1rem = 10px: 10/16 = .625
+
+//             <-- RESPONSIVE -->
+
+    @include layout(tablet-l) { // < 1200
+        font-size: 56.25%;  // 1rem = 9px: 9/16 = .5625
+    }
+
+    @include layout(tablet-p) { // < 900
+        font-size: 50%; // 1rem = 8px: 8/16 = .5
+    }
+
+    @include layout(desktop-lg) { // > 1800
+        font-size: 75%; // 1rem = 12px: 12/16 = .75
+    }
+}
 
 h1,
 h2,
@@ -24,4 +40,8 @@ body {
     padding: 3rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+
+    @include layout(tablet-p) { 
+        padding: 0;
+    }
 }

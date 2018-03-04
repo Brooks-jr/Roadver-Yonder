@@ -32,17 +32,31 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
-        
+
+        @include layout(tablet-p) {
+            width: 100%;
+            display: block;
+        }        
     }
     &__right {
         width: 66.666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include layout(tablet-p) {
+            width: 100%;
+            display: block;
+        } 
     }
     &__image {
         display: block;
         width: 100%;
+
+        @include layout(tablet-p) {
+            width: 49.7%;
+            display: inline-block;
+        } 
     }
     &__text {
         font-size: 1.4rem;

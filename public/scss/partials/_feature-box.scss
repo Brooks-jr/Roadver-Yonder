@@ -1,5 +1,6 @@
 .feature-box {
-    background-color: rgba($white, .85);
+    background-color: rgba($white, .9);
+    color: $pink-orange;
     font-size: 1.5rem;
     padding: 2.5rem;
     text-align: center;
@@ -10,6 +11,9 @@
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
+    @include layout(tablet-p) {
+        padding: 2rem;
+    }
     @include animation-jerk-fix;
     .sub-heading {
         letter-spacing: .02rem;
@@ -22,6 +26,9 @@
         -webkit-background-clip: text;
                 background-clip: text;
         color: transparent;
+        @include layout(tablet-p) {
+            margin-bottom: 0;
+        }
     }
     &__text {
     }

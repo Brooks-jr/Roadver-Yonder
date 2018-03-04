@@ -10,6 +10,9 @@ section.about {
     padding: 25rem 0;
     margin-top: -20vh;
 
+    @include layout(tablet-p) {
+        padding: 25rem 0 10rem 0;
+    }  
 }
 
 .section-title {
@@ -23,9 +26,22 @@ section.about {
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
+
     span {
+
         @include title-cursive;
         font-size: 3rem;
+    }
+
+    @include layout(tablet-p) {
+        font-size: 3rem;
+    }
+
+    @include layout(phone) {
+        font-size: 2.5rem;
+        span {
+            font-size: 2.5rem;
+        }
     }
 }
 
@@ -45,7 +61,7 @@ section.about {
 // <-- FEATURES -->
 // ======================
 section.features {
-    padding: 20rem 0;
+    padding: 20rem 0 10rem 0;
     background-image: -webkit-gradient(
         linear, 
         left top, right bottom, 
@@ -59,10 +75,11 @@ section.features {
         url(../dist/images/bg-features.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 1%;
+    background-position: center;
     background-attachment: fixed;
-    -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
-            clip-path: polygon(0 15vh, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+       
     margin-top: -3rem;
     // transform: skewY(-7deg);
     // & > * {
@@ -76,6 +93,10 @@ section.features {
 section.adventures {
     padding: 10rem 0 15rem 0;
     background-color: $white;
+
+    @include layout(tablet-p) {
+        padding: 5rem 0 10rem 0;
+    }
 }
 
 // ======================
@@ -93,6 +114,10 @@ section.testimonials {
     background-attachment: fixed;
     padding: 15rem 0;
     position: relative;
+
+    @include layout(tablet-p) {
+        padding: 5rem 0 10rem 0;
+    }
 }
 
 // ======================
@@ -101,6 +126,10 @@ section.testimonials {
 section.booking {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $orange, $red-orange);
+
+    @include layout(tablet-p) {
+        padding: 10rem 0;
+    }
 }
 
 .book {
@@ -108,11 +137,26 @@ section.booking {
     background-position: 70% 40%;
     background-repeat: no-repeat;
     background-size: cover;
+
     @include rounded-slight;
     box-shadow: 0 1.5rem 8rem $shadow-darkest;
-    height: 50rem;
+
+    @include layout(tablet-l) {
+        background-image: linear-gradient(105deg, rgba($white, .9)0%, rgba($white, .85)65%, transparent 65%),url(../dist/images/bg-booking-form.png);
+    }
+    @include layout(tablet-p) {
+        background-image: linear-gradient(to right, rgba($white, .9)0%, rgba($white, .85)100%),url(../dist/images/bg-booking-form.png);
+    }
     &__form {
         width: 50%;
         padding: 3rem 6rem 6rem 6rem;
+
+        @include layout(tablet-l) {
+            width: 65%;
+        }
+
+        @include layout(tablet-p) {
+            width: 100%;
+        }
     }
 }

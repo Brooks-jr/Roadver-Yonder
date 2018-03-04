@@ -1,12 +1,28 @@
-// TEXT
+// ===========================================
+// -          U T I L I T I E S
+// ===========================================
+// <-- TEXT -->
 .u-center-text {text-align: center !important;}
 
-// MARGINS
+// <-- MARGINS -->
+
 // bottom
 .u-margin-bottom-small {margin-bottom: 1.5rem !important;}
-.u-margin-bottom-medium {margin-bottom: 4rem !important;}
-.u-margin-bottom-large {margin-bottom: 8rem !important;}
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+    @include layout(tablet-p) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-large {
+    margin-bottom: 8rem !important;
+    @include layout(tablet-p) {
+        margin-bottom: 5rem !important;
+    }
+}
 .u-margin-bottom-huge {margin-bottom: 10rem !important;}
+
 // top
 .u-margin-top-small {margin-top: 1.5rem !important;}
 .u-margin-top-medium {margin-top: 4rem !important;}

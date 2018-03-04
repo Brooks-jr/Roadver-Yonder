@@ -6,6 +6,14 @@
     margin: 0 auto;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include layout(tablet-p) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include layout(tablet-p) {
+        max-width: 70rem;
+        padding: 0 3rem;
     }
     @include clearfix;
     // selects all class attributes that start with 'col-'
@@ -13,6 +21,15 @@
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include layout(tablet-p) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+                
+            }
+        }
+        @include layout(tablet-p) {
+            width: 100% !important;
         }
     }
     // <-- 2 COLUMNS -->

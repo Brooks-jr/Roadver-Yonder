@@ -20,6 +20,10 @@
     background-attachment: fixed;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    @include layout(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
     position: relative;
     &__logo-wrap {
         position: absolute;
@@ -45,6 +49,7 @@
     font-weight: 700;
     @include animation-jerk-fix;
     margin-bottom: 6rem;
+
     &--main {
         font-family: $pacifico;
         font-size: 8rem;
@@ -53,6 +58,10 @@
         -webkit-animation-name: fadeInLeft;
                 animation-name: fadeInLeft;
         @include animation-transition;
+        @include layout(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     &--sub {
         font-size: 2rem;
@@ -60,5 +69,8 @@
         -webkit-animation-name: fadeInRight;
                 animation-name: fadeInRight;
         @include animation-transition;
+        @include layout(phone) {
+            letter-spacing: .2rem;
+        }
     }
 }

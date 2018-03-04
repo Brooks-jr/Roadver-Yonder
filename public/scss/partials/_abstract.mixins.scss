@@ -49,3 +49,37 @@
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
+
+/* ===================================
+-      <-- MEDIA QUERIES -->
+
+0 - 600px:      Phone
+600 - 900px:    Tablet(portrait)
+900 - 1200px:   Tablet(ladscape)
+1200 - 1800px:  Normal Styles Apply
+1800px + :      Large Desktop
+
+-       <-- BREAK POINTS -->
+
+phone
+tablet-p
+tablet-l
+desktop-lg
+=================================== */
+
+
+@mixin layout($breakpoint) {
+    // best to use EM for media queries: 1em = 16px
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content};         //600px
+    }
+    @if $breakpoint == tablet-p {
+        @media (max-width: 56.25em) {@content};        //900px
+    }
+    @if $breakpoint == tablet-l {
+        @media (max-width: 75em) {@content};           //1200px
+    }
+    @if $breakpoint == desktop-lg {
+        @media (min-width: 112.5em) {@content};        //1800px
+    }
+}

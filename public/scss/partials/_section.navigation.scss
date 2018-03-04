@@ -18,6 +18,10 @@
                 box-shadow: 0 1rem 4rem $shadow-light;
         text-align: center;
         cursor: pointer;
+        @include layout(tablet-p) {
+            top: 4rem;
+            right: 4rem;
+        }
     }
     &__background {
         height: 6rem;
@@ -32,6 +36,10 @@
         transition: -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        @include layout(tablet-p) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
     }
     &__nav {
         height: 100vh;
