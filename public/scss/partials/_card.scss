@@ -166,7 +166,10 @@
 
 
     // MEDIA QUERY
-    @include layout(tablet-p) {
+    // @include layout(tablet-p) {
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover: none) {
+        
         height: auto;
         @include rounded-slight;
         background-color: $white;
@@ -207,7 +210,7 @@
             margin-bottom: 4rem;
         }
         &__price-value {
-            font-size: 12rem;
+            font-size: 9rem;
         }
     }
 }
