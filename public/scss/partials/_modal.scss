@@ -54,11 +54,16 @@
     &__image {
         display: block;
         width: 100%;
+        height: auto;
+        @include layout(tablet-l) {
+            height: 50%;
+        } 
 
         @include layout(tablet-p) {
-            width: 49.7%;
-            display: inline-block;
-        } 
+            width: 50%;
+            float: left;
+        }
+
     }
     &__text {
         font-size: 1.4rem;
@@ -98,10 +103,9 @@
             transition: all .2s;
             line-height: 1;
             @include layout(tablet-p) {
-                color: $red-orange;
+                color: $white;
+                background-color: rgba($black, .75);
                 font-size: 5rem;
-                background-color: $white;
-                @include rounded;
             }
         }
         &:hover {
