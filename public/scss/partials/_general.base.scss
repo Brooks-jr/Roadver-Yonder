@@ -44,4 +44,9 @@ body {
     @include layout(tablet-p) { 
         padding: 0;
     }
+
+    ::selection {
+        background-color: $pink-orange;
+        color: $white;
+    }
 }
