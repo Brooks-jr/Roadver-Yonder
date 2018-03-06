@@ -61,10 +61,10 @@ gulp.task('styles-scss', function () {
         }))
         // show sourcemaps what files looked like before
         .pipe(sourcemaps.init())
-        // passes files into autoprefixer plugin
-        .pipe(autoprefixer())
         // concats files into one file called main.css
         .pipe(sass({ outputStyle: 'compressed' }))
+         // passes files into autoprefixer plugin
+        .pipe(autoprefixer())
         // writes sourcemaps files based on what init saw
         .pipe(sourcemaps.write())
         // saves files in dist folder
